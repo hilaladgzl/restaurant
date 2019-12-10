@@ -1036,7 +1036,7 @@ class Ui_menu(object):
                        self.comboBoxfkadayif, self.comboBoxkdolma, self.comboBoxkatmer, self.comboBoxekmek,
                        self.comboBoxkaymak,
                        self.comboBoxfcake, self.comboBoxlcake, self.comboBoxbrowni, self.comboBoxmozaik,
-                       self.comboBoxkuruvasan, self.comboBoxtiramisu, self.comboBoxfistikryasi,
+                       self.comboBoxkuruvasan, self.comboBoxtiramisu, self.comboBoxfistikruyasi,
                        self.comboBoxmeyvesoleni, self.comboBoxcikolatalim, self.comboBoxozelpasta,
                        self.comboBoxcay, self.comboBoxturkkahvesi, self.comboBoxdibek,
                        self.comboBoxdamlasakizli,
