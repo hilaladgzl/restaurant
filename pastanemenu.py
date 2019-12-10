@@ -830,13 +830,13 @@ class Ui_menu(object):
         font.setPointSize(11)
         self.checkBoxmadensuyu.setFont(font)
         self.checkBoxmadensuyu.setObjectName("checkBoxmadensuyu")
-        self.checkBox_38 = QtWidgets.QCheckBox(menu)
-        self.checkBox_38.setGeometry(QtCore.QRect(1270, 270, 231, 20))
+        self.checkBoxSicakcikolata = QtWidgets.QCheckBox(menu)
+        self.checkBoxSicakcikolata.setGeometry(QtCore.QRect(1270, 270, 231, 20))
         font = QtGui.QFont()
         font.setFamily("Lucida Handwriting")
         font.setPointSize(11)
-        self.checkBox_38.setFont(font)
-        self.checkBox_38.setObjectName("checkBox_38")
+        self.checkBoxSicakcikolata.setFont(font)
+        self.checkBoxSicakcikolata.setObjectName("checkBoxSicakcikolata")
         self.checkBoxmeyvelisoda = QtWidgets.QCheckBox(menu)
         self.checkBoxmeyvelisoda.setGeometry(QtCore.QRect(1260, 470, 191, 20))
         font = QtGui.QFont()
@@ -906,14 +906,14 @@ class Ui_menu(object):
         self.comboBoxturkkahvesi.addItem("")
         self.comboBoxturkkahvesi.addItem("")
         self.comboBoxturkkahvesi.addItem("")
-        self.comboBox_38 = QtWidgets.QComboBox(menu)
-        self.comboBox_38.setGeometry(QtCore.QRect(1500, 270, 71, 20))
-        self.comboBox_38.setObjectName("comboBox_38")
-        self.comboBox_38.addItem("")
-        self.comboBox_38.addItem("")
-        self.comboBox_38.addItem("")
-        self.comboBox_38.addItem("")
-        self.comboBox_38.addItem("")
+        self.comboBoxSicakcikolata = QtWidgets.QComboBox(menu)
+        self.comboBoxSicakcikolata.setGeometry(QtCore.QRect(1500, 270, 71, 20))
+        self.comboBoxSicakcikolata.setObjectName("comboBoxSicakcikolata")
+        self.comboBoxSicakcikolata.addItem("")
+        self.comboBoxSicakcikolata.addItem("")
+        self.comboBoxSicakcikolata.addItem("")
+        self.comboBoxSicakcikolata.addItem("")
+        self.comboBoxSicakcikolata.addItem("")
         self.comboBoxsutlukahve = QtWidgets.QComboBox(menu)
         self.comboBoxsutlukahve.setGeometry(QtCore.QRect(1500, 230, 71, 20))
         self.comboBoxsutlukahve.setObjectName("comboBoxsutlukahve")
@@ -994,9 +994,9 @@ class Ui_menu(object):
         self.lblToplamFiyati = QtWidgets.QLabel(menu)
         self.lblToplamFiyati.setGeometry(QtCore.QRect(1290, 900, 111, 41))
         self.lblToplamFiyati.setStyleSheet("font: 87 12pt \"Segoe UI Black\";\n"
-                                    "background-color:rgb(88, 25, 31);\n"
-                                    "color: rgb(255, 255, 255);\n"
-                                    "border-bottom-color: rgb(115, 14, 18);")
+                                           "background-color:rgb(88, 25, 31);\n"
+                                           "color: rgb(255, 255, 255);\n"
+                                           "border-bottom-color: rgb(115, 14, 18);")
         self.lblToplamFiyati.setObjectName("lblToplamFiyati")
         self.label_15 = QtWidgets.QLabel(menu)
         self.label_15.setGeometry(QtCore.QRect(1560, 850, 191, 51))
@@ -1014,25 +1014,29 @@ class Ui_menu(object):
 
         self.retranslateUi(menu)
         QtCore.QMetaObject.connectSlotsByName(menu)
-        mycheckBox = [self.checkBoxsutlac, self.checkBoxtrilece, self.checkBoxgullac, self.checkBoxmuhallebi,
+
+        self.myRowIDs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]
+
+        self.mycheckBox = [self.checkBoxsutlac, self.checkBoxtrilece, self.checkBoxgullac, self.checkBoxmuhallebi,
                       self.checkBoxkazandibi, self.checkBoxmagnolia, self.checkBoxirmik, self.checkBoxprof,
                       self.checkBoxspungle, self.checkBoxkeskul,
-                      self.checkBoxcevizli, self.checkBoxfindikli, self.checkBoxnuriye, self.checkBoxsobiyet,
-                      self.checkBoxfkadayif, self.checkBoxkdolma, self.checkBoxkatmer, self.checkBoxekmek,
+                      self.checkBoxcevizli, self.checkBoxfistikli,self.checkBoxfindikli, self.checkBoxnuriye, self.checkBoxsobiyet,
+                      self.checkBoxcikobak,
+                      self.checkBoxkunefe,self.checkBoxfkadayif, self.checkBoxkdolma, self.checkBoxkatmer, self.checkBoxekmek,
                       self.checkBoxkaymak,
                       self.checkBoxfcake, self.checkBoxlcake, self.checkBoxbrowni, self.checkBoxmozaik,
                       self.checkBoxkuruvasan, self.checkBoxtiramisu, self.checkBoxfistikryasi,
                       self.checkBoxmeyvesoleni,
                       self.checkBoxcikolatalim, self.checkBoxozelpasta,
                       self.checkBoxcay, self.checkBoxturkkahvesi, self.checkBoxdibek, self.checkBoxdamlasakizli,
-                      self.checkBoxsutlukahve, self.checkBox_38, self.checkBoxmadensuyu,
+                      self.checkBoxsutlukahve, self.checkBoxSicakcikolata, self.checkBoxmadensuyu,
                       self.checkBoxmeyvelisoda,
                       self.checkBoxicetea, self.checkBoxspecial]
 
-        mycombokBox = [self.comboBoxsutlac, self.comboBoxtrilece, self.comboBoxgullac, self.comboBoxmuhallebi,
+        self.mycombokBox = [self.comboBoxsutlac, self.comboBoxtrilece, self.comboBoxgullac, self.comboBoxmuhallebi,
                        self.comboBoxkazandibi, self.comboBoxmagnolia, self.comboBoxirmik, self.comboBoxprof,
                        self.comboBoxspungle, self.comboBoxkeskul,
-                       self.comboBoxcevizli, self.comboBoxfindikli, self.comboBoxnuriye, self.comboBoxsobiyet,
+                       self.comboBoxcevizli,self.comboBoxfistikli, self.comboBoxfindikli, self.comboBoxnuriye, self.comboBoxsobiyet,self.comboBoxcikobak,self.comboBoxkunefe,
                        self.comboBoxfkadayif, self.comboBoxkdolma, self.comboBoxkatmer, self.comboBoxekmek,
                        self.comboBoxkaymak,
                        self.comboBoxfcake, self.comboBoxlcake, self.comboBoxbrowni, self.comboBoxmozaik,
@@ -1040,10 +1044,15 @@ class Ui_menu(object):
                        self.comboBoxmeyvesoleni, self.comboBoxcikolatalim, self.comboBoxozelpasta,
                        self.comboBoxcay, self.comboBoxturkkahvesi, self.comboBoxdibek,
                        self.comboBoxdamlasakizli,
-                       self.comboBoxsutlukahve, self.comboBox_38, self.comboBoxmadensuyu,
+                       self.comboBoxsutlukahve, self.comboBoxSicakcikolata, self.comboBoxmadensuyu,
                        self.comboBoxmeyvelisoda,
                        self.comboBoxicetea, self.comboBoxspecial]
 
+        # Set clicked events
+        for obj in self.mycheckBox:
+            obj.clicked.connect(self.fiyat)
+        for obj in self.mycombokBox:
+            obj.currentIndexChanged.connect(self.fiyat)
 
     def retranslateUi(self, menu):
         _translate = QtCore.QCoreApplication.translate
@@ -1256,7 +1265,7 @@ class Ui_menu(object):
         self.label_12.setText(_translate("menu", "İçecekler"))
         self.checkBoxsutlukahve.setText(_translate("menu", "Sütlü Kahve  ₺15"))
         self.checkBoxmadensuyu.setText(_translate("menu", "Maden Suyu  ₺4"))
-        self.checkBox_38.setText(_translate("menu", "Sıcak Çikolata  ₺15"))
+        self.checkBoxSicakcikolata.setText(_translate("menu", "Sıcak Çikolata  ₺15"))
         self.checkBoxmeyvelisoda.setText(_translate("menu", "Meyveli Soda  ₺5"))
         self.checkBoxicetea.setText(_translate("menu", "Ice Tea  ₺5"))
         self.checkBoxspecial.setText(_translate("menu", "Special Meyve Suyu  ₺15"))
@@ -1290,11 +1299,11 @@ class Ui_menu(object):
         self.comboBoxturkkahvesi.setItemText(2, _translate("menu", "3 adet"))
         self.comboBoxturkkahvesi.setItemText(3, _translate("menu", "4 adet"))
         self.comboBoxturkkahvesi.setItemText(4, _translate("menu", "5 adet"))
-        self.comboBox_38.setItemText(0, _translate("menu", "1 adet"))
-        self.comboBox_38.setItemText(1, _translate("menu", "2 adet"))
-        self.comboBox_38.setItemText(2, _translate("menu", "3 adet"))
-        self.comboBox_38.setItemText(3, _translate("menu", "4 adet"))
-        self.comboBox_38.setItemText(4, _translate("menu", "5 adet"))
+        self.comboBoxSicakcikolata.setItemText(0, _translate("menu", "1 adet"))
+        self.comboBoxSicakcikolata.setItemText(1, _translate("menu", "2 adet"))
+        self.comboBoxSicakcikolata.setItemText(2, _translate("menu", "3 adet"))
+        self.comboBoxSicakcikolata.setItemText(3, _translate("menu", "4 adet"))
+        self.comboBoxSicakcikolata.setItemText(4, _translate("menu", "5 adet"))
         self.comboBoxsutlukahve.setItemText(0, _translate("menu", "1 adet"))
         self.comboBoxsutlukahve.setItemText(1, _translate("menu", "2 adet"))
         self.comboBoxsutlukahve.setItemText(2, _translate("menu", "3 adet"))
@@ -1338,13 +1347,28 @@ class Ui_menu(object):
         self.label_2.setText(_translate("menu", "TextLabel"))
         self.label_4.setText(_translate("menu", "TextLabel"))
         self.pushButtonAdd.setText(_translate("menu", "Siparişe Ekle"))
-        self.checkBoxsutlac.clicked.connect(lambda: self.fiyat(1))
 
-    def fiyat(self, id):
-        price = self.getPriceSutluler(id)
-        print(str(price))
-        n = self.comboBoxsutlac.currentIndex() + 1
-        total = price * n
+    def fiyat(self):
+        # 1-10 sutluler; 11-22 sepasrbest;  23-32 pastalar; 33-42 icecekler;
+        size = len(self.myRowIDs)
+        total = 0
+        for i in range(size):
+            if self.mycheckBox[i].isChecked():
+                n = self.mycombokBox[i].currentIndex() + 1
+                if 0 <=i <= 9:
+                    id = self.myRowIDs[i]
+                    price = self.getPriceSutluler(id)
+                elif 10<=i<=21:
+                    id = self.myRowIDs[i]
+                    price = self.getPriceSerbest(id)
+                elif 22<=i<=31:
+                    id = self.myRowIDs[i]
+                    price = self.getPricePasta(id)
+                else:
+                    id = self.myRowIDs[i]
+                    price = self.getPriceIcecek(id)
+                tempTotal = price * n
+                total += tempTotal
         self.lblToplamFiyati.setText('%0.2f' % total)
 
     def getPriceSutluler(self, id):
@@ -1355,6 +1379,29 @@ class Ui_menu(object):
         for data in res:
             return data[0]
 
+    def getPriceSerbest(self, id):
+        conn = sqlite3.connect('Our_data.db')
+        curs = conn.cursor()
+        content = 'select fiyat from serbetliler where serbetlilerid = %d' % id
+        res = curs.execute(content)
+        for data in res:
+            return data[0]
+
+    def getPricePasta(self, id):
+        conn = sqlite3.connect('Our_data.db')
+        curs = conn.cursor()
+        content = 'select fiyat from pastalar where pastaid = %d' % id
+        res = curs.execute(content)
+        for data in res:
+            return data[0]
+
+    def getPriceIcecek(self, id):
+        conn = sqlite3.connect('Our_data.db')
+        curs = conn.cursor()
+        content = 'select fiyat from icecekler where icecekid = %d' % id
+        res = curs.execute(content)
+        for data in res:
+            return data[0]
 
 if __name__ == "__main__":
     import sys
