@@ -1,8 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
 
+from PyQt5.QtWidgets import QMessageBox
+
 
 class Ui_menu(object):
+    def __init__(self):
+        self.totalPrice = 0
+        self.details = ""
+
     def setupUi(self, menu):
         menu.setObjectName("menu")
         menu.resize(1708, 1468)
@@ -1015,44 +1021,50 @@ class Ui_menu(object):
         self.retranslateUi(menu)
         QtCore.QMetaObject.connectSlotsByName(menu)
 
-        self.myRowIDs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]
+        self.myRowIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+                         27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42]
 
         self.mycheckBox = [self.checkBoxsutlac, self.checkBoxtrilece, self.checkBoxgullac, self.checkBoxmuhallebi,
-                      self.checkBoxkazandibi, self.checkBoxmagnolia, self.checkBoxirmik, self.checkBoxprof,
-                      self.checkBoxspungle, self.checkBoxkeskul,
-                      self.checkBoxcevizli, self.checkBoxfistikli,self.checkBoxfindikli, self.checkBoxnuriye, self.checkBoxsobiyet,
-                      self.checkBoxcikobak,
-                      self.checkBoxkunefe,self.checkBoxfkadayif, self.checkBoxkdolma, self.checkBoxkatmer, self.checkBoxekmek,
-                      self.checkBoxkaymak,
-                      self.checkBoxfcake, self.checkBoxlcake, self.checkBoxbrowni, self.checkBoxmozaik,
-                      self.checkBoxkuruvasan, self.checkBoxtiramisu, self.checkBoxfistikryasi,
-                      self.checkBoxmeyvesoleni,
-                      self.checkBoxcikolatalim, self.checkBoxozelpasta,
-                      self.checkBoxcay, self.checkBoxturkkahvesi, self.checkBoxdibek, self.checkBoxdamlasakizli,
-                      self.checkBoxsutlukahve, self.checkBoxSicakcikolata, self.checkBoxmadensuyu,
-                      self.checkBoxmeyvelisoda,
-                      self.checkBoxicetea, self.checkBoxspecial]
+                           self.checkBoxkazandibi, self.checkBoxmagnolia, self.checkBoxirmik, self.checkBoxprof,
+                           self.checkBoxspungle, self.checkBoxkeskul,
+                           self.checkBoxcevizli, self.checkBoxfistikli, self.checkBoxfindikli, self.checkBoxnuriye,
+                           self.checkBoxsobiyet,
+                           self.checkBoxcikobak,
+                           self.checkBoxkunefe, self.checkBoxfkadayif, self.checkBoxkdolma, self.checkBoxkatmer,
+                           self.checkBoxekmek,
+                           self.checkBoxkaymak,
+                           self.checkBoxfcake, self.checkBoxlcake, self.checkBoxbrowni, self.checkBoxmozaik,
+                           self.checkBoxkuruvasan, self.checkBoxtiramisu, self.checkBoxfistikryasi,
+                           self.checkBoxmeyvesoleni,
+                           self.checkBoxcikolatalim, self.checkBoxozelpasta,
+                           self.checkBoxcay, self.checkBoxturkkahvesi, self.checkBoxdibek, self.checkBoxdamlasakizli,
+                           self.checkBoxsutlukahve, self.checkBoxSicakcikolata, self.checkBoxmadensuyu,
+                           self.checkBoxmeyvelisoda,
+                           self.checkBoxicetea, self.checkBoxspecial]
 
         self.mycombokBox = [self.comboBoxsutlac, self.comboBoxtrilece, self.comboBoxgullac, self.comboBoxmuhallebi,
-                       self.comboBoxkazandibi, self.comboBoxmagnolia, self.comboBoxirmik, self.comboBoxprof,
-                       self.comboBoxspungle, self.comboBoxkeskul,
-                       self.comboBoxcevizli,self.comboBoxfistikli, self.comboBoxfindikli, self.comboBoxnuriye, self.comboBoxsobiyet,self.comboBoxcikobak,self.comboBoxkunefe,
-                       self.comboBoxfkadayif, self.comboBoxkdolma, self.comboBoxkatmer, self.comboBoxekmek,
-                       self.comboBoxkaymak,
-                       self.comboBoxfcake, self.comboBoxlcake, self.comboBoxbrowni, self.comboBoxmozaik,
-                       self.comboBoxkuruvasan, self.comboBoxtiramisu, self.comboBoxfistikruyasi,
-                       self.comboBoxmeyvesoleni, self.comboBoxcikolatalim, self.comboBoxozelpasta,
-                       self.comboBoxcay, self.comboBoxturkkahvesi, self.comboBoxdibek,
-                       self.comboBoxdamlasakizli,
-                       self.comboBoxsutlukahve, self.comboBoxSicakcikolata, self.comboBoxmadensuyu,
-                       self.comboBoxmeyvelisoda,
-                       self.comboBoxicetea, self.comboBoxspecial]
+                            self.comboBoxkazandibi, self.comboBoxmagnolia, self.comboBoxirmik, self.comboBoxprof,
+                            self.comboBoxspungle, self.comboBoxkeskul,
+                            self.comboBoxcevizli, self.comboBoxfistikli, self.comboBoxfindikli, self.comboBoxnuriye,
+                            self.comboBoxsobiyet, self.comboBoxcikobak, self.comboBoxkunefe,
+                            self.comboBoxfkadayif, self.comboBoxkdolma, self.comboBoxkatmer, self.comboBoxekmek,
+                            self.comboBoxkaymak,
+                            self.comboBoxfcake, self.comboBoxlcake, self.comboBoxbrowni, self.comboBoxmozaik,
+                            self.comboBoxkuruvasan, self.comboBoxtiramisu, self.comboBoxfistikruyasi,
+                            self.comboBoxmeyvesoleni, self.comboBoxcikolatalim, self.comboBoxozelpasta,
+                            self.comboBoxcay, self.comboBoxturkkahvesi, self.comboBoxdibek,
+                            self.comboBoxdamlasakizli,
+                            self.comboBoxsutlukahve, self.comboBoxSicakcikolata, self.comboBoxmadensuyu,
+                            self.comboBoxmeyvelisoda,
+                            self.comboBoxicetea, self.comboBoxspecial]
 
         # Set clicked events
         for obj in self.mycheckBox:
             obj.clicked.connect(self.fiyat)
         for obj in self.mycombokBox:
             obj.currentIndexChanged.connect(self.fiyat)
+
+        self.pushButtonAdd.clicked.connect(self.siparisEkle)
 
     def retranslateUi(self, menu):
         _translate = QtCore.QCoreApplication.translate
@@ -1352,24 +1364,50 @@ class Ui_menu(object):
         # 1-10 sutluler; 11-22 sepasrbest;  23-32 pastalar; 33-42 icecekler;
         size = len(self.myRowIDs)
         total = 0
+        details = ""
         for i in range(size):
-            if self.mycheckBox[i].isChecked():
+            obj = self.mycheckBox[i]
+            if obj.isChecked():
+                name = obj.text()
                 n = self.mycombokBox[i].currentIndex() + 1
-                if 0 <=i <= 9:
+                if 0 <= i <= 9:
                     id = self.myRowIDs[i]
                     price = self.getPriceSutluler(id)
-                elif 10<=i<=21:
+                elif 10 <= i <= 21:
                     id = self.myRowIDs[i]
                     price = self.getPriceSerbest(id)
-                elif 22<=i<=31:
+                elif 22 <= i <= 31:
                     id = self.myRowIDs[i]
                     price = self.getPricePasta(id)
                 else:
                     id = self.myRowIDs[i]
                     price = self.getPriceIcecek(id)
+                details += name + " "+ str(price) + "; "
                 tempTotal = price * n
                 total += tempTotal
+
+        self.totalPrice = total
+        self.details = details
         self.lblToplamFiyati.setText('%0.2f' % total)
+
+    def siparisEkle(self):
+
+        if self.totalPrice == 0:
+            self.general_message("Error","Please chose ya sen daha iyi yazarsin Hilal")
+            return
+
+        conn = sqlite3.connect('Our_data.db')
+        conn.execute(
+            '''insert into siparistablosu(urunler,toplamfiyat) values(?,?)''',
+            (self.details, self.totalPrice))
+        conn.commit()
+
+    def general_message(self, title, message):
+        msg = QMessageBox()
+        msg.setWindowTitle(title)
+        msg.setText(message)
+        msg.setIcon(QMessageBox.Question)
+        msg.exec_()
 
     def getPriceSutluler(self, id):
         conn = sqlite3.connect('Our_data.db')
@@ -1402,6 +1440,7 @@ class Ui_menu(object):
         res = curs.execute(content)
         for data in res:
             return data[0]
+
 
 if __name__ == "__main__":
     import sys
