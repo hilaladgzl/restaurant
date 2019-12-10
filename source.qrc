@@ -1,0 +1,26 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>arka.jpg</file>
+    <file>pp.jpg</file>
+    <file>drink.jpg</file>
+    <file>portakal.jpg</file>
+    <file>sevimlip.webp</file>
+    <file>pst2.webp</file>
+    <file>pst1.jpg</file>
+    <file>pst1.jpg</file>
+    <file>pasta.jpg</file>
+    <file>baklava.jpg</file>
+    <file>sutlac.jpg</file>
+    <file>srbtli.jpg</file>
+    <file>srbtli.jpg</file>
+    <file>srbtli.jpg</file>
+    <file>srbtli.jpg</file>
+    <file>serbetli</file>
+    <file>sutlac.jpg</file>
+    <file>frnstlc.jpg</file>
+    <file>frnstlc.jpg</file>
+    <file>sutlac.jpg</file>
+    <file>wfl1.jpg</file>
+    <file>waffle.jpg</file>
+  </qresource>
+</RCC>

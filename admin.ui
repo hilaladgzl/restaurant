@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>admin</class>
+ <widget class="QWidget" name="admin">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>769</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/newPrefix/arka.jpg);</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 10pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Üyeleri Listele</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 10pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Spariş Listele</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 10pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Menüyü Gör</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 10pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Üye Sil</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 10pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Üye Ekle</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>160</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>9</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 9pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Sütlüler</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>160</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>9</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 9pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Şerbetliler</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>160</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>9</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 9pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>içecekler</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>160</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>OCR A Extended</family>
+     <pointsize>9</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font: 75 9pt &quot;OCR A Extended&quot;;
+color: #494949 !important;
+text-transform: uppercase;
+
+background: #ffffff;
+padding: 10px;
+border: 2px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+QPushButton:hover {
+color: #ffffff !important;
+background: #663366;
+border-color: #D0D0D0 !important;
+transition: all 0.4s ease 0s;
+}</string>
+   </property>
+   <property name="text">
+    <string>Pastalar</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>250</y>
+     <width>811</width>
+     <height>481</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
