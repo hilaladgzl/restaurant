@@ -991,13 +991,13 @@ class Ui_menu(object):
                                     "background-color: rgb(78, 52, 59);\n"
                                     "color: rgb(245, 250, 246);")
         self.label_13.setObjectName("label_13")
-        self.label_14 = QtWidgets.QLabel(menu)
-        self.label_14.setGeometry(QtCore.QRect(1290, 900, 111, 41))
-        self.label_14.setStyleSheet("font: 87 12pt \"Segoe UI Black\";\n"
+        self.lblToplamFiyati = QtWidgets.QLabel(menu)
+        self.lblToplamFiyati.setGeometry(QtCore.QRect(1290, 900, 111, 41))
+        self.lblToplamFiyati.setStyleSheet("font: 87 12pt \"Segoe UI Black\";\n"
                                     "background-color:rgb(88, 25, 31);\n"
                                     "color: rgb(255, 255, 255);\n"
                                     "border-bottom-color: rgb(115, 14, 18);")
-        self.label_14.setObjectName("label_14")
+        self.lblToplamFiyati.setObjectName("lblToplamFiyati")
         self.label_15 = QtWidgets.QLabel(menu)
         self.label_15.setGeometry(QtCore.QRect(1560, 850, 191, 51))
         self.label_15.setStyleSheet("font: 87 12pt \"Segoe UI Black\";\n"
@@ -1333,7 +1333,7 @@ class Ui_menu(object):
         self.btntoplam.setText(_translate("menu", "TOPLAM FİYAT"))
         self.label_13.setText(_translate("menu",
                                          "                                                                                     ~~ TADIGÜZEL PASTANELERİ ~~"))
-        self.label_14.setText(_translate("menu", " :"))
+        self.lblToplamFiyati.setText(_translate("menu", " :"))
         self.label_15.setText(_translate("menu", " Siparişi Tamamla!"))
         self.label_2.setText(_translate("menu", "TextLabel"))
         self.label_4.setText(_translate("menu", "TextLabel"))
@@ -1345,7 +1345,7 @@ class Ui_menu(object):
         print(str(price))
         n = self.comboBoxsutlac.currentIndex() + 1
         total = price * n
-        self.label_14.setText('%0.2f' % total)
+        self.lblToplamFiyati.setText('%0.2f' % total)
 
     def getPriceSutluler(self, id):
         conn = sqlite3.connect('Our_data.db')
